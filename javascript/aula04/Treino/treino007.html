@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIAS DA SEMANA</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+            color: rgb(255, 0, 200);
+            font: normal 20pt arial;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Dia da semana</h1>
+    Veja que dia é hoje <input type="button" value="dia" onclick="clicar()">
+    <div id="res"></div>
+    <script>
+        function clicar(){
+            var dia = window.document.getElementById('dia')
+            var res = window.document.querySelector('div#res')
+            var s = new Date()
+            var diasem = s.getDay
+            res.innerHTML = `O dia da semana é ${s}`
+            switch(s) {
+                case 0: ('Domingo')
+                break
+                case 1: ('Segunda')
+                break
+                case 2: ('Terça')
+                break
+                case 3: ('Quarta')
+                break
+                case 4: ('Quinta')
+                break
+                case 5: ('Sexta')
+                break
+                case 6: ('Sabado')
+                break
+            }
+            
+
+        
+        }
+
+    </script>
+    
+</body>
+</html>

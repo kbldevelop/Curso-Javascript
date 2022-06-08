@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITULO DE ELEITOR</title>
+    <style>
+        body {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>Insira sua idade</h1>
+    Idade: <input type="number" name="idade" id="idade">
+    <input type="button" value="conferir" onclick="clicar()">
+    <div id = "res"></div>
+    <script>
+        function clicar() {
+            var idade = window.document.querySelector('input#idade')
+            var res = window.document.querySelector('div#res')
+            var s = idade.value 
+            res.innerHTML = `<p>Sua idade é: <strong>${s}</strong></p>`
+            if (s <= 16 ){
+                res.innerHTML += 'Menor de idade <br>'
+                res.innerHTML += 'Voto opcional <br>'
+            
+            }
+            else if (s > 65){
+                res.innerHTML += 'Idoso(a)<p>'
+                res.innerHTML += 'Voto opcional'
+            }
+            else {
+                res.innerHTML += 'Maior de idade<br>'
+                res.innerHTML += 'Voto obrigatorio'
+         }
+            
+               
+            
+            
+            
+
+        }
+    </script>
+    
+</body>
+</html>

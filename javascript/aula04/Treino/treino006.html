@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recebe sua saudação</title>
+    <style>
+        body {
+            background-color: rgb(245, 208, 159);
+            
+        }
+         
+    </style>
+</head>
+<body>
+    <h1>Insira a hora do dia</h1>
+    Horario atual: <input type="number" name="hora" id="hora"> Horas
+    <input type="button" value="verificar" onclick="clicar()">
+    <div id="res"></div>
+    <script>
+        function clicar(){
+            var hora = window.document.getElementById('hora')
+            var res = window.document.querySelector('div#res')
+            var n = hora.value
+            res.innerHTML = `A hora atual é <strong>${n}</strong> horas.<br>`
+            if (n < 12){
+                res.innerHTML += 'Bom Dia!'
+                res.style.background = 'pink'                
+              }
+              else if  (n > 18){
+                res.innerHTML += 'Boa Noite!'
+                res.style.background = 'blue'
+              }
+              else if (n > 12){
+                  res.innerHTML += 'Boa Tarde!'
+                  res.style.background = 'green'
+              }
+              
+              
+        }
+    </script>
+</body>
+</html>
